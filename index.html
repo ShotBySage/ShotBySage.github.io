@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShotBySage | Photography</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for icons (no download needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="topline">Live Music • Performance Art • Portraits • UK</div>
+
+  <h1>Sage Crossley<br>Photography</h1>
+
+  <p class="tagline">
+    Raw moments. Real people. Low light, loud nights.
+  </p>
+
+  <p class="subtag">
+    I document live music, cool performances, and moments that feel louder than they look.
+  </p>
+
+  <p class="subtag">
+    Based in the UK. Available for gigs, portraits, and personal projects.
+  </p>
+
+  <!-- CONTACT BUTTON -->
+  <a class="contact-btn" href="mailto:sagecrossleyphotography@gmail.com">
+    Contact Me
+  </a>
+</header>
+
+
+
+<section class="filter">
+    <label for="category">What do you want to see? :</label>
+    <select id="category">
+        <option value="all">All</option>
+        <option value="Live Music">Live Music</option>
+        <option value="Performance Acts">Performance Acts</option>
+        <option value="Other">Other</option>
+    </select>
+</section>
+
+<section class="gallery">
+    <img src="images/gigb&w.jpg" data-category="Live Music">
+    <img src="images/gigsolo.jpg" data-category="Live Music">
+    <img src="images/gigduo.jpg" data-category="Live Music">
+    <img src="images/fire1.jpg" data-category="Performance Acts">
+    <img src="images/fire2.jpg" data-category="Performance Acts">
+    <img src="images/ice2.jpg" data-category="Performance Acts">
+    <img src="images/ice1.jpg" data-category="Performance Acts">
+    <img src="images/sparkcirc.jpg" data-category="Performance Acts">
+    <img src="images/kidphone.jpg" data-category="Other">
+</section>
+
+<footer class="footer">
+  <div class="footer-bar">
+    <div class="social-links">
+      <a href="https://www.instagram.com/shotbysage_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@shotbysage_?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+
+    <!-- EMAIL TEXT -->
+    <div class="email-text">
+      <a href="mailto:sagecrossleyphotography@gmail.com">
+        SageCrossleyPhotography@gmail.com
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+    const select = document.getElementById("category");
+    const images = document.querySelectorAll(".gallery img");
+
+    select.addEventListener("change", function() {
+        const value = this.value;
+
+        images.forEach(img => {
+            const category = img.getAttribute("data-category");
+
+            if (value === "all" || category === value) {
+                img.style.display = "block";
+            } else {
+                img.style.display = "none";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

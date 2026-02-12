@@ -1,0 +1,146 @@
+/* Reset default spacing */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+header p {
+    font-size: 18px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ----------------------------
+   Contact Button (top)
+---------------------------- */
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #000;          /* black button */
+    color: #fff;               /* white text */
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 2px solid #fff;   /* white border */
+}
+
+.contact-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* ----------------------------
+   Dropdown filter styles
+---------------------------- */
+.filter {
+    text-align: center;
+    padding: 10px 20px 0 20px;
+}
+
+.filter label {
+    color: #aaa;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.filter select {
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #222;
+    color: white;
+    border: 1px solid #333;
+}
+
+/* Gallery grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Images with animation */
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s ease, transform 0.4s ease, height 0.4s ease;
+}
+
+/* Hover effect */
+.gallery img:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+/* Hidden images (fade + collapse space) */
+.gallery img.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+./* Apply nice font site-wide */
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  background: #000;
+  padding: 20px 0;
+}
+
+.footer-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.email-text a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;          /* light & elegant */
+  letter-spacing: 1px;       /* spaced out for style */
+  text-align: center;        /* centers the text */
+}
