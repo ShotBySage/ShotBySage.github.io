@@ -61,18 +61,30 @@ header .subtag {
 .contact-btn {
     display: inline-block;
     margin-top: 35px;
-    padding: 12px 32px;
-    background: transparent;
+    padding: 14px 36px;
+    background: linear-gradient(135deg, #ff004c, #b300ff);
     color: #fff;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
-    border: 1px solid #444;
-    letter-spacing: 1px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     font-size: 13px;
-    transition: all 0.3s ease;
+    border: none;
+    transition: all 0.35s ease;
+
+    box-shadow:
+        0 0 12px rgba(255, 0, 76, 0.6),
+        0 0 30px rgba(179, 0, 255, 0.4);
 }
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 20px rgba(255, 0, 76, 0.8),
+        0 0 45px rgba(179, 0, 255, 0.6);
+}
+
 
 .contact-btn:hover {
     background: #fff;
@@ -207,3 +219,4 @@ header .subtag {
     background: #ff004c;
     color: white;
 }
+
