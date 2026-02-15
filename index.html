@@ -9,14 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
-<!-- Font Awesome (stable version) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
 <header>
-  <div class="site-name"><a href="index.html">ShotBySage</a></div>
+  <div class="site-name">
+    <a href="index.html">ShotBySage</a>
+  </div>
 
   <!-- Desktop Nav -->
   <nav class="desktop-nav">
@@ -26,26 +27,30 @@
     <a href="#">Performance Acts</a>
   </nav>
 
-  <!-- Mobile Dropdown -->
+  <!-- Mobile Nav Button -->
   <div class="mobile-nav">
-    <button id="dropdown-toggle">
+    <button id="dropdown-toggle" type="button">
       Categories <span id="arrow">▼</span>
     </button>
-    <div id="dropdown-menu">
-      <a href="#">Audience & Candid</a>
-      <a href="#">Burlesque</a>
-      <a href="#">Live Music</a>
-      <a href="#">Performance Acts</a>
-    </div>
   </div>
 
-  <a class="contact-btn" href="mailto:SageCrossleyPhotography@gmail.com">Contact</a>
+  <a class="contact-btn" href="mailto:SageCrossleyPhotography@gmail.com">
+    Contact
+  </a>
 </header>
+
+<!-- Mobile Dropdown Menu -->
+<div id="dropdown-menu">
+  <a href="#">Audience & Candid</a>
+  <a href="#">Burlesque</a>
+  <a href="#">Live Music</a>
+  <a href="#">Performance Acts</a>
+</div>
 
 <main class="hero">
   <h1>ShotBySage</h1>
   <h2>Photographer</h2>
-  <p>These are my current favourite few. Wanna see more? Check the links at the top of the page :)</p>
+  <p></p>
   <div class="gallery" id="homepage-gallery"></div>
 </main>
 
@@ -53,28 +58,25 @@
   <div class="footer-text">
     <a href="https://www.instagram.com/shotbysage_" target="_blank">Instagram</a>
     <a href="https://tiktok.com/@ShotBySage_" target="_blank">TikTok</a>
-    <a href="mailto:SageCrossleyPhotography@gmail.com">SageCrossleyPhotography@gmail.com</a>
+    <a href="mailto:SageCrossleyPhotography@gmail.com">
+      SageCrossleyPhotography@gmail.com
+    </a>
   </div>
+
   <div class="footer-icons">
-    <a href="https://www.instagram.com/shotbysage_" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://tiktok.com/@ShotBySage_" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="mailto:SageCrossleyPhotography@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.instagram.com/shotbysage_" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://tiktok.com/@ShotBySage_" target="_blank">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="mailto:SageCrossleyPhotography@gmail.com">
+      <i class="fas fa-envelope"></i>
+    </a>
   </div>
 </footer>
 
-<!-- Mobile nav toggle JS -->
-<script>
-const dropdownToggle = document.getElementById('dropdown-toggle');
-const dropdownMenu = document.getElementById('dropdown-menu');
-const arrow = document.getElementById('arrow');
-
-dropdownToggle.addEventListener('click', () => {
-  const isOpen = dropdownMenu.style.display === 'block';
-  dropdownMenu.style.display = isOpen ? 'none' : 'block';
-  arrow.textContent = isOpen ? '▼' : '▲';
-});
-</script>
-
 <script src="gallery.js"></script>
+
 </body>
 </html>
