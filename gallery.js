@@ -87,36 +87,33 @@ modalImg.addEventListener("touchmove", e => {
 // ---------------- CATEGORY DEFINITIONS ----------------
 const categories = {
   "Audience & Candid": [
-    { src: "images/audience/2.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
     { src: "images/audience/1.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
-	{ src: "images/audience/3.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
+    { src: "images/audience/2.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
+    { src: "images/audience/3.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
     { src: "images/audience/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
   ],
   "Burlesque": [
     { src: "images/burlesque/1.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
     { src: "images/burlesque/2.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
-	{ src: "images/burlesque/3.jpg", caption: "Stripknot | Halifax Goth Fest 2026" },
-	{ src: "images/burlesque/4.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
-	{ src: "images/burlesque/5.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
+    { src: "images/burlesque/3.jpg", caption: "Stripknot | Halifax Goth Fest 2026" },
+    { src: "images/burlesque/4.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
+    { src: "images/burlesque/5.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
   ],
-  
   "Live Music": [
     { src: "images/live/1.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
     { src: "images/live/2.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
     { src: "images/live/3.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
     { src: "images/live/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-	{ src: "images/live/5.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-	{ src: "images/live/6.jpg", caption: "Close up at 'Salvation' Gig | Halifax Goth Fest 2026" },
-	{ src: "images/live/7.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
-	{ src: "images/live/8.jpg", caption: "SillyLittleSongz | Huddersfield Northern Quarter" },
+    { src: "images/live/5.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
+    { src: "images/live/6.jpg", caption: "Close up at 'Salvation' Gig | Halifax Goth Fest 2026" },
+    { src: "images/live/7.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
+    { src: "images/live/8.jpg", caption: "SillyLittleSongz | Huddersfield Northern Quarter" },
   ],
-
-
   "Performance Acts": [
     { src: "images/performance/1.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
-	{ src: "images/performance/2.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
+    { src: "images/performance/2.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
     { src: "images/performance/3.jpg", caption: "SandInYourEye | HuddersfieldBID Charity Event" },
-	{ src: "images/performance/4.jpg", caption: "SandInYourEye | HuddersfieldBID Charity Event" },
+    { src: "images/performance/4.jpg", caption: "SandInYourEye | HuddersfieldBID Charity Event" },
   ],
 };
 
@@ -148,8 +145,8 @@ function renderGallery(images){
   });
 }
 
-// ---------------- NAV LINK HANDLER ----------------
-const navLinks = document.querySelectorAll('nav a');
+// ---------------- DESKTOP NAV ----------------
+const navLinks = document.querySelectorAll('.desktop-nav a');
 navLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -166,32 +163,38 @@ navLinks.forEach(link => {
 heroText.textContent = defaultHeroText;
 renderGallery(homepageImages);
 
-// MOBILE DROPDOWN
+// ---------------- MOBILE DROPDOWN ----------------
 const toggle = document.getElementById("dropdown-toggle");
 const menu = document.getElementById("dropdown-menu");
 const arrow = document.getElementById("arrow");
 const mobileLinks = document.querySelectorAll("#dropdown-menu a");
 
-if (toggle) {
+if(toggle){
   toggle.addEventListener("click", () => {
     menu.style.display = menu.style.display === "flex" ? "none" : "flex";
     arrow.style.transform = menu.style.display === "flex" ? "rotate(180deg)" : "rotate(0deg)";
   });
 
   document.addEventListener("click", (e) => {
-    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+    if(!toggle.contains(e.target) && !menu.contains(e.target)){
       menu.style.display = "none";
       arrow.style.transform = "rotate(0deg)";
     }
   });
 
   mobileLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      mobileLinks.forEach(l => l.classList.remove("active"));
-      link.classList.add("active");
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const category = link.textContent;
+      const images = categories[category];
+      if(images){
+        heroText.textContent = `You are currently viewing ${category}. To switch, please click the links at the top of the page.`;
+        renderGallery(images);
+      }
+
+      // Close menu + rotate arrow
       menu.style.display = "none";
       arrow.style.transform = "rotate(0deg)";
     });
   });
 }
-
