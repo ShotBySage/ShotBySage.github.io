@@ -16,7 +16,7 @@ header {
 .site-name a {
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #fff;
   text-align: left;
   text-shadow: 0 0 6px rgba(144,190,144,0.3);
@@ -89,7 +89,7 @@ header {
 }
 .hero h1 {
   font-family: 'UnifrakturCook', serif;
-  font-size: 5rem;
+  font-size: 3.5rem;
   color: #fff;
   text-shadow: 0 0 6px rgba(144,190,144,0.5);
   margin-bottom: 20px;
@@ -197,3 +197,4 @@ footer {
   .mobile-nav { flex: 0; }
   #dropdown-menu { right: 10px; top: 60px; }
 }
+
