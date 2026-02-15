@@ -1,8 +1,5 @@
 console.log("JS loaded");
 
-
-// Homepage + Category Gallery JS
-
 // ---------------- HOMEPAGE FAVORITES ----------------
 const homepageImages = [
   { src: "images/homepage/1.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
@@ -10,7 +7,7 @@ const homepageImages = [
   { src: "images/homepage/3.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
   { src: "images/homepage/4.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
   { src: "images/homepage/5.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
-  { src: "images/homepage/6.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
+  { src: "images/homepage/6.jpg", caption:"Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
 ];
 
 const defaultHeroText =
@@ -36,14 +33,10 @@ const modalCaption = document.getElementById("modal-caption");
 const closeBtn = document.getElementById("close-modal");
 
 closeBtn.addEventListener("click", () => (modal.style.display = "none"));
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) modal.style.display = "none";
-});
+modal.addEventListener("click", (e) => { if (e.target === modal) modal.style.display = "none"; });
 
 // ---------------- ZOOM RESET ----------------
-let scale = 1;
-let originX = 0;
-let originY = 0;
+let scale = 1, originX = 0, originY = 0;
 
 function resetZoom() {
   scale = 1;
@@ -90,7 +83,6 @@ function renderGallery(images) {
   if (!container) return;
 
   container.innerHTML = "";
-
   images.forEach((image) => {
     const item = document.createElement("div");
     item.classList.add("gallery-item");
@@ -135,32 +127,34 @@ navLinks.forEach((link) => {
 if (heroText) heroText.textContent = defaultHeroText;
 renderGallery(homepageImages);
 
-// ---------------- MOBILE DROPDOWN ----------------
-const toggle = document.getElementById("dropdown-toggle");
-const menu = document.getElementById("dropdown-menu");
-const arrow = document.getElementById("arrow");
-const mobileLinks = document.querySelectorAll("#dropdown-menu a");
+// ---------------- MOBILE DROPDOWN (SCOPED) ----------------
+(() => {
+  const toggle = document.getElementById("dropdown-toggle");
+  const menu = document.getElementById("dropdown-menu");
+  const arrow = document.getElementById("arrow");
+  const mobileLinks = document.querySelectorAll("#dropdown-menu a");
 
-if (toggle) {
-  toggle.addEventListener("click", () => {
-    const open = menu.style.display === "flex";
-    menu.style.display = open ? "none" : "flex";
-    arrow.style.transform = open ? "rotate(0deg)" : "rotate(180deg)";
-  });
-
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const category = link.textContent.trim();
-      const images = categories[category];
-
-      if (images) {
-        heroText.textContent = `You are currently viewing ${category}.`;
-        renderGallery(images);
-      }
-
-      menu.style.display = "none";
-      arrow.style.transform = "rotate(0deg)";
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      const open = menu.style.display === "flex";
+      menu.style.display = open ? "none" : "flex";
+      arrow.style.transform = open ? "rotate(0deg)" : "rotate(180deg)";
     });
-  });
-}
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const category = link.textContent.trim();
+        const images = categories[category];
+
+        if (images) {
+          heroText.textContent = `You are currently viewing ${category}.`;
+          renderGallery(images);
+        }
+
+        menu.style.display = "none";
+        arrow.style.transform = "rotate(0deg)";
+      });
+    });
+  }
+})();
