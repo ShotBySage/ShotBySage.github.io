@@ -7,7 +7,7 @@ const homepageImages = [
   { src: "images/homepage/3.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
   { src: "images/homepage/4.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
   { src: "images/homepage/5.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
-  { src: "images/homepage/6.jpg", caption:"Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
+  { src: "images/homepage/6.JPG", caption:"Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
 ];
 
 const defaultHeroText = "These are my current favourite few. Wanna see more? Check the links at the top of the page :)";
@@ -194,3 +194,4 @@ if (toggle) {
     });
   });
 }
+
