@@ -49,6 +49,7 @@ header {
   display: flex;
   gap: 25px;
   margin: 25px;
+
 }
 .desktop-nav a {
   transition: 0.3s ease;
@@ -142,8 +143,10 @@ header {
 
 /* --- GALLERY --- */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* desktop: 3 columns */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
   width: 90%;
   max-width: 1200px;
