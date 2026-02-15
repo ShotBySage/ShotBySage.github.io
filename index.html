@@ -1,83 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShotBySage | Photographer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShotBySage | Photographer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
+    <header>
+      <div class="site-name">
+        <a href="index.html">ShotBySage</a>
+      </div>
 
-<header>
-  <div class="site-name">
-    <a href="index.html">ShotBySage</a>
-  </div>
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav">
+        <a href="#">Audience & Candid</a>
+        <a href="#">Burlesque</a>
+        <a href="#">Live Music</a>
+        <a href="#">Performance Acts</a>
+      </nav>
 
-  <!-- Desktop Nav -->
-  <nav class="desktop-nav">
-    <a href="#">Audience & Candid</a>
-    <a href="#">Burlesque</a>
-    <a href="#">Live Music</a>
-    <a href="#">Performance Acts</a>
-  </nav>
+      <!-- Mobile Nav Button -->
+      <div class="mobile-nav">
+        <button id="dropdown-toggle" type="button">
+          Categories <span id="arrow">▼</span>
+        </button>
+      </div>
 
-  <!-- Mobile Nav Button -->
-  <div class="mobile-nav">
-    <button id="dropdown-toggle" type="button">
-      Categories <span id="arrow">▼</span>
-    </button>
-  </div>
+      <!-- Contact button hidden on mobile -->
+      <a class="contact-btn" href="mailto:SageCrossleyPhotography@gmail.com">
+        Contact
+      </a>
+    </header>
 
-  <!-- Contact button hidden on mobile -->
-  <a class="contact-btn" href="mailto:SageCrossleyPhotography@gmail.com">
-    Contact
-  </a>
-</header>
+    <!-- Mobile Dropdown Menu -->
+    <div id="dropdown-menu">
+      <a href="#">Audience & Candid</a>
+      <a href="#">Burlesque</a>
+      <a href="#">Live Music</a>
+      <a href="#">Performance Acts</a>
+    </div>
 
-<!-- Mobile Dropdown Menu -->
-<div id="dropdown-menu">
-  <a href="#">Audience & Candid</a>
-  <a href="#">Burlesque</a>
-  <a href="#">Live Music</a>
-  <a href="#">Performance Acts</a>
-</div>
+    <main class="hero">
+      <h1>ShotBySage</h1>
+      <h2>Photographer</h2>
+      <p></p>
+      <div class="gallery" id="homepage-gallery"></div>
+    </main>
 
-<main class="hero">
-  <h1>ShotBySage</h1>
-  <h2>Photographer</h2>
-  <p></p>
-  <div class="gallery" id="homepage-gallery"></div>
-</main>
+    <footer>
+      <div class="footer-text">
+        <a href="https://www.instagram.com/shotbysage_" target="_blank"
+          >Instagram</a
+        >
+        <a href="https://tiktok.com/@ShotBySage_" target="_blank">TikTok</a>
+        <a href="mailto:SageCrossleyPhotography@gmail.com">
+          SageCrossleyPhotography@gmail.com
+        </a>
+      </div>
 
-<footer>
-  <div class="footer-text">
-    <a href="https://www.instagram.com/shotbysage_" target="_blank">Instagram</a>
-    <a href="https://tiktok.com/@ShotBySage_" target="_blank">TikTok</a>
-    <a href="mailto:SageCrossleyPhotography@gmail.com">
-      SageCrossleyPhotography@gmail.com
-    </a>
-  </div>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/shotbysage_" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://tiktok.com/@ShotBySage_" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="mailto:SageCrossleyPhotography@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
 
-  <div class="footer-icons">
-    <a href="https://www.instagram.com/shotbysage_" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://tiktok.com/@ShotBySage_" target="_blank">
-      <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="mailto:SageCrossleyPhotography@gmail.com">
-      <i class="fas fa-envelope"></i>
-    </a>
-  </div>
-</footer>
-
-<script src="gallery.js"></script>
-
-</body>
+    <script src="gallery.js"></script>
+  </body>
 </html>
