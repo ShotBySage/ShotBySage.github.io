@@ -48,17 +48,17 @@ function resetZoom() {
 // ---------------- CATEGORY DEFINITIONS ----------------
 const categories = {
   "Audience & Candid": [
-    { src: "images/Audience/1.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
-    { src: "images/Audience/2.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
-    { src: "images/Audience/3.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-    { src: "images/Audience/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
+    { src: "images/audience/1.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
+    { src: "images/audience/2.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
+    { src: "images/audience/3.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
+    { src: "images/audience/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
   ],
   Burlesque: [
-    { src: "images/Burlesque/1.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
-    { src: "images/Burlesque/2.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
-    { src: "images/Burlesque/3.jpg", caption: "Stripknot | Halifax Goth Fest 2026" },
-    { src: "images/Burlesque/4.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
-    { src: "images/Burlesque/5.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
+    { src: "images/burlesque/1.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
+    { src: "images/burlesque/2.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
+    { src: "images/burlesque/3.jpg", caption: "Stripknot | Halifax Goth Fest 2026" },
+    { src: "images/burlesque/4.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
+    { src: "images/burlesque/5.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
   ],
   "Live Music": [
     { src: "images/live/1.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
@@ -158,4 +158,5 @@ renderGallery(homepageImages);
     });
   }
 })();
+
 
