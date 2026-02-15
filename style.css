@@ -99,7 +99,7 @@ header {
 
 .hero h1 {
   font-family: 'UnifrakturCook', serif;
-  font-size: 5rem; /* desktop size */
+  font-size: 5rem; /* desktop size stays */
   color: #fff;
   text-shadow: 0 0 6px rgba(144,190,144,0.5);
   margin-bottom: 20px;
@@ -108,13 +108,13 @@ header {
 .hero h2, .hero p {
   font-family: 'Montserrat', sans-serif;
   color: #f1f1f1;
-  font-size: 1rem; /* middle text smaller */
+  font-size: 1rem; /* smaller middle text */
 }
 
 /* --- GALLERY --- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* desktop layout */
   gap: 15px;
   width: 90%;
   max-width: 1200px;
@@ -123,7 +123,7 @@ header {
 .gallery-item { position: relative; cursor: pointer; transition: 0.3s ease; }
 .gallery-item img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* force squares */
+  height: 250px; /* normal desktop image height */
   object-fit: cover;
   transition: 0.3s ease;
   filter: brightness(0.95);
@@ -187,7 +187,7 @@ footer {
 
   .contact-btn { display: none; }
 
-  /* Mobile gallery: keep 3 columns as desktop, force squares */
+  /* Mobile gallery: 1x1 squares, always 3 columns on mobile */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     gap: 6px;
@@ -200,6 +200,9 @@ footer {
     object-fit: cover;
   }
   .gallery-item .caption { display: none; }
+
+  /* Hero text smaller on mobile */
+  .hero h1 { font-size: 3.5rem; }
 
   .footer-text { display: none; }
   .footer-icons { display: flex; gap: 30px; }
@@ -215,7 +218,4 @@ footer {
   .site-name { flex: 1; text-align: left; margin-left: 5px; }
   .mobile-nav { flex: 0; }
   #dropdown-menu { right: 10px; top: 60px; }
-
-  /* Hero text smaller on mobile */
-  .hero h1 { font-size: 3.5rem; }
 }
