@@ -46,7 +46,7 @@
         </button>
       </div>
 
-      <!-- Contact button hidden on mobile -->
+      <!-- Contact button -->
       <a class="contact-btn" href="mailto:SageCrossleyPhotography@gmail.com">
         Contact
       </a>
@@ -93,7 +93,7 @@
 
     <script src="gallery.js"></script>
 
-    <!-- MOBILE DROPDOWN TOGGLE (only for mobile screens) -->
+    <!-- MOBILE DROPDOWN TOGGLE (runs only on mobile) -->
     <script>
       if (window.innerWidth <= 768) {
         const dropdownToggle = document.getElementById("dropdown-toggle");
@@ -101,10 +101,9 @@
 
         dropdownToggle.addEventListener("click", () => {
           dropdownMenu.classList.toggle("show");
-          dropdownToggle.classList.toggle("active"); // flip arrow
+          dropdownToggle.classList.toggle("active");
         });
 
-        // Close menu when a link is clicked, allow immediate reopen
         const dropdownLinks = dropdownMenu.querySelectorAll("a");
         dropdownLinks.forEach(link => {
           link.addEventListener("click", () => {
@@ -115,7 +114,6 @@
           });
         });
 
-        // Close menu when clicking outside
         window.addEventListener("click", (e) => {
           if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
             dropdownMenu.classList.remove("show");
