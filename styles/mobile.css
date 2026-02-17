@@ -12,6 +12,8 @@
 /* Show mobile nav button */
 .mobile-nav {
   display: block;
+  position: relative;
+  z-index: 1001;
 }
 
 /* Mobile dropdown menu */
@@ -25,10 +27,14 @@
   border-radius: 6px;
   overflow: hidden;
   z-index: 1000;
+  max-height: 0;
+  transition: max-height 0.3s ease;
 }
 
 #dropdown-menu.show {
   display: flex;
+  flex-direction: column;
+  max-height: 500px; /* enough to show all links */
 }
 
 #dropdown-menu a {
@@ -43,9 +49,10 @@
   border-bottom: none;
 }
 
-/* Mobile gallery: 3-column squares */
+/* --- MOBILE GALLERY --- */
 .gallery {
-  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 6px;
   width: 95%;
   margin: 100px auto 40px auto;
