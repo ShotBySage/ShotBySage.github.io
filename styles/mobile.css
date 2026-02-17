@@ -1,32 +1,72 @@
 /* --- MOBILE LAYOUT FIXES --- */
-@media (max-width: 768px) {
-  /* Hide top contact button */
-  .top-contact-button {
-    display: none !important;
-  }
 
-  /* Categories dropdown */
-  .categories {
-    display: block;
-    width: 95%;
-    margin: 20px auto;
-    position: relative;
-  }
+/* Hide desktop nav and contact button on mobile */
+.desktop-nav {
+  display: none;
+}
 
-  .categories select {
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #fff;
-    appearance: none; /* removes default arrow for consistency */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
+.contact-btn {
+  display: none !important;
+}
 
-  /* Optional: small spacing between gallery and dropdown */
-  .gallery {
-    margin-top: 20px;
-  }
+/* Show mobile nav button */
+.mobile-nav {
+  display: block;
+}
+
+/* Mobile dropdown menu */
+#dropdown-menu {
+  display: none; /* hidden by default */
+  flex-direction: column;
+  width: 90%;
+  margin: 10px auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#dropdown-menu.show {
+  display: flex;
+}
+
+#dropdown-menu a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+#dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+/* Mobile gallery: 3-column squares */
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  width: 95%;
+  margin: 100px auto 40px auto;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* square container */
+  overflow: hidden;
+}
+
+.gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item .caption {
+  display: none;
 }
