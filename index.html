@@ -93,35 +93,36 @@
 
     <script src="gallery.js"></script>
 
-    <!-- MOBILE DROPDOWN TOGGLE -->
+    <!-- MOBILE DROPDOWN TOGGLE (only for mobile screens) -->
     <script>
-      const dropdownToggle = document.getElementById("dropdown-toggle");
-      const dropdownMenu = document.getElementById("dropdown-menu");
+      if (window.innerWidth <= 768) {
+        const dropdownToggle = document.getElementById("dropdown-toggle");
+        const dropdownMenu = document.getElementById("dropdown-menu");
 
-      dropdownToggle.addEventListener("click", () => {
-        dropdownMenu.classList.toggle("show");
-        dropdownToggle.classList.toggle("active"); // flip arrow
-      });
+        dropdownToggle.addEventListener("click", () => {
+          dropdownMenu.classList.toggle("show");
+          dropdownToggle.classList.toggle("active"); // flip arrow
+        });
 
-      // Close menu when a link is clicked, but allow reopening
-      const dropdownLinks = dropdownMenu.querySelectorAll("a");
-      dropdownLinks.forEach(link => {
-        link.addEventListener("click", () => {
-          // Delay removal so toggle can reopen immediately
-          setTimeout(() => {
+        // Close menu when a link is clicked, allow immediate reopen
+        const dropdownLinks = dropdownMenu.querySelectorAll("a");
+        dropdownLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            setTimeout(() => {
+              dropdownMenu.classList.remove("show");
+              dropdownToggle.classList.remove("active");
+            }, 10);
+          });
+        });
+
+        // Close menu when clicking outside
+        window.addEventListener("click", (e) => {
+          if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
             dropdownMenu.classList.remove("show");
             dropdownToggle.classList.remove("active");
-          }, 10);
+          }
         });
-      });
-
-      // Close menu when clicking outside
-      window.addEventListener("click", (e) => {
-        if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
-          dropdownMenu.classList.remove("show");
-          dropdownToggle.classList.remove("active");
-        }
-      });
+      }
     </script>
   </body>
 </html>
