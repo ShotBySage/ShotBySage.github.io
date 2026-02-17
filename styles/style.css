@@ -1,0 +1,88 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #111214;
+  color: #f1f1f1;
+}
+
+a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+a:visited {
+  color: #f1f1f1;
+}
+
+/* --- HERO --- */
+.hero {
+  padding-top: 120px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: "UnifrakturCook", serif;
+  font-size: 5rem; /* desktop size stays */
+  color: #fff;
+  text-shadow: 0 0 6px rgba(144, 190, 144, 0.5);
+  margin-bottom: 20px;
+}
+
+.hero h2,
+.hero p {
+  font-family: "Montserrat", sans-serif;
+  color: #f1f1f1;
+  font-size: 1rem; /* smaller middle text */
+}
+
+/* --- GALLERY --- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: 250px; /* desktop height */
+  object-fit: cover;
+  transition: 0.3s ease;
+  filter: brightness(0.95);
+}
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px 8px #7e9a76;
+}
+.gallery-item:hover img {
+  filter: brightness(1);
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(17, 18, 20, 0.7);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.gallery-item:hover .caption {
+  opacity: 1;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}

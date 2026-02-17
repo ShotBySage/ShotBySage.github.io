@@ -1,0 +1,32 @@
+/* --- FOOTER --- */
+footer {
+  height: 70px;
+  background: rgba(17, 18, 20, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-text {
+  display: flex;
+  gap: 25px;
+}
+.footer-text a:hover {
+  text-shadow: 0 0 8px #7e9a76;
+}
+.footer-icons {
+  display: none;
+}
+
+.footer-text {
+  display: none;
+}
+.footer-icons {
+  display: flex;
+  gap: 30px;
+}
+.footer-icons a {
+  font-size: 1.4rem;
+}
+.footer-icons a:hover {
+  text-shadow: 0 0 10px #7e9a76;
+}
