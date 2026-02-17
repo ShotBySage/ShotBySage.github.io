@@ -100,12 +100,23 @@
 
       dropdownToggle.addEventListener("click", () => {
         dropdownMenu.classList.toggle("show");
+        dropdownToggle.classList.toggle("active"); // flip arrow
+      });
+
+      // Close menu when a link is clicked
+      const dropdownLinks = dropdownMenu.querySelectorAll("a");
+      dropdownLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          dropdownMenu.classList.remove("show");
+          dropdownToggle.classList.remove("active");
+        });
       });
 
       // Optional: close menu when clicking outside
       window.addEventListener("click", (e) => {
         if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
           dropdownMenu.classList.remove("show");
+          dropdownToggle.classList.remove("active");
         }
       });
     </script>
