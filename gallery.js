@@ -37,6 +37,13 @@ modal.addEventListener("click", (e) => {
   if (e.target === modal) modal.style.display = "none";
 });
 
+// ---------------- ZOOM RESET ----------------
+let scale = 1;
+function resetZoom() {
+  scale = 1;
+  modalImg.style.transform = "scale(1)";
+}
+
 // ---------------- CATEGORY DEFINITIONS ----------------
 const categories = {
   "Audience & Candid": [
@@ -74,11 +81,11 @@ const categories = {
   ],
 };
 
-// ---------------- HELPER: PREVIEW PATH ----------------
+// ---------------- PREVIEW PATH HELPER ----------------
 function getPreviewPath(fullPath) {
   const parts = fullPath.split("/");
   const fileName = parts.pop();
-  return parts.join("/") + "/preview/" + fileName;
+  return `${parts.join("/")}/preview/${fileName}`;
 }
 
 // ---------------- RENDER FUNCTION ----------------
@@ -92,13 +99,14 @@ function renderGallery(images) {
     item.classList.add("gallery-item");
 
     const img = document.createElement("img");
-    img.src = getPreviewPath(image.src);
+    img.src = getPreviewPath(image.src); // compressed preview
     img.alt = image.caption;
     img.loading = "lazy";
 
     img.addEventListener("click", () => {
       modal.style.display = "flex";
-      modalImg.src = image.src;
+      resetZoom();
+      modalImg.src = image.src; // full resolution
       modalCaption.textContent = image.caption;
     });
 
@@ -138,27 +146,27 @@ renderGallery(homepageImages);
   const arrow = document.getElementById("arrow");
   const mobileLinks = document.querySelectorAll("#dropdown-menu a");
 
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      const open = menu.style.display === "flex";
-      menu.style.display = open ? "none" : "flex";
-      arrow.style.transform = open ? "rotate(0deg)" : "rotate(180deg)";
+  if (!toggle) return;
+
+  toggle.addEventListener("click", () => {
+    const open = menu.style.display === "flex";
+    menu.style.display = open ? "none" : "flex";
+    arrow.style.transform = open ? "rotate(0deg)" : "rotate(180deg)";
+  });
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const category = link.textContent.trim();
+      const images = categories[category];
+
+      if (images) {
+        heroText.textContent = `You are currently viewing ${category}.`;
+        renderGallery(images);
+      }
+
+      menu.style.display = "none";
+      arrow.style.transform = "rotate(0deg)";
     });
-
-    mobileLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const category = link.textContent.trim();
-        const images = categories[category];
-
-        if (images) {
-          heroText.textContent = `You are currently viewing ${category}.`;
-          renderGallery(images);
-        }
-
-        menu.style.display = "none";
-        arrow.style.transform = "rotate(0deg)";
-      });
-    });
-  }
+  });
 })();
