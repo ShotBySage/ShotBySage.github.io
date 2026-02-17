@@ -108,6 +108,22 @@ const categories = {
       src: "images/Burlesque/5.jpg",
       caption: "Lois Tunnicliff | Halifax Goth Fest 2026",
     },
+    {
+      src: "images/Burlesque/6.jpg",
+      caption: "Stripknot | Halifax Goth Fest 2026",
+    },
+      {
+      src: "images/Burlesque/7.jpg",
+      caption: "DisgusTay | Halifax Goth Fest 2026",
+    },
+    {
+      src: "images/Burlesque/8.jpg",
+      caption: "Stripknot | Halifax Goth Fest 2026",
+    },
+    {
+      src: "images/Burlesque/9.jpg",
+      caption: "Lois Tunnicliff | Halifax Goth Fest 2026",
+    },
   ],
   "Live Music": [
     {
@@ -243,4 +259,5 @@ renderGallery(homepageImages);
     });
   }
 })();
+
 
