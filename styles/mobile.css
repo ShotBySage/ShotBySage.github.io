@@ -24,14 +24,15 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  background-color: #fff; /* matches previous site theme */
-  border: 1px solid #ccc;
+  background-color: #111; /* match site background */
+  border: 1px solid #333;
   border-radius: 6px;
   font-size: 16px;
+  color: #fff;
   cursor: pointer;
 }
 
-/* Arrow rotation when open */
+/* Arrow rotation when menu is open */
 #dropdown-toggle.active #arrow {
   transform: rotate(180deg);
   transition: transform 0.3s ease;
@@ -43,7 +44,7 @@
   flex-direction: column;
   width: 90%;
   margin: 0 auto 20px auto;
-  background-color: var(--site-background-color); /* match your site's background */
+  background-color: #111; /* match site background */
   border-radius: 6px;
   overflow: hidden;
   z-index: 1000;
@@ -61,21 +62,21 @@
 #dropdown-menu a {
   padding: 12px 16px;
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-size: 16px;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 #dropdown-menu a:hover,
 #dropdown-menu a:active {
-  background-color: #00b140; /* green highlight on press */
+  background-color: #00b140; /* green highlight */
   color: #fff;
 }
 
 /* --- MOBILE GALLERY --- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 6px;
   width: 95%;
   margin: 100px auto 40px auto;
