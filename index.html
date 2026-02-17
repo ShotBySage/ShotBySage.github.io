@@ -92,5 +92,22 @@
     </footer>
 
     <script src="gallery.js"></script>
+
+    <!-- MOBILE DROPDOWN TOGGLE -->
+    <script>
+      const dropdownToggle = document.getElementById("dropdown-toggle");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+
+      dropdownToggle.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("show");
+      });
+
+      // Optional: close menu when clicking outside
+      window.addEventListener("click", (e) => {
+        if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.classList.remove("show");
+        }
+      });
+    </script>
   </body>
 </html>
