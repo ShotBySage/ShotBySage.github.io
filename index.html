@@ -103,16 +103,19 @@
         dropdownToggle.classList.toggle("active"); // flip arrow
       });
 
-      // Close menu when a link is clicked
+      // Close menu when a link is clicked, but allow reopening
       const dropdownLinks = dropdownMenu.querySelectorAll("a");
       dropdownLinks.forEach(link => {
         link.addEventListener("click", () => {
-          dropdownMenu.classList.remove("show");
-          dropdownToggle.classList.remove("active");
+          // Delay removal so toggle can reopen immediately
+          setTimeout(() => {
+            dropdownMenu.classList.remove("show");
+            dropdownToggle.classList.remove("active");
+          }, 10);
         });
       });
 
-      // Optional: close menu when clicking outside
+      // Close menu when clicking outside
       window.addEventListener("click", (e) => {
         if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
           dropdownMenu.classList.remove("show");
