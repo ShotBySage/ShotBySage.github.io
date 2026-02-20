@@ -33,6 +33,7 @@ const modalCaption = document.getElementById("modal-caption");
 const closeBtn = document.getElementById("close-modal");
 
 closeBtn.addEventListener("click", () => (modal.style.display = "none"));
+if (window.closeMobileDropdown) window.closeMobileDropdown();
 modal.addEventListener("click", (e) => {
   if (e.target === modal) modal.style.display = "none";
 });
@@ -104,6 +105,7 @@ function renderGallery(images) {
     img.loading = "lazy";
 
     img.addEventListener("click", () => {
+	  if (window.closeMobileDropdown) window.closeMobileDropdown();
       modal.style.display = "flex";
       resetZoom();
       modalImg.src = image.src; // full resolution
