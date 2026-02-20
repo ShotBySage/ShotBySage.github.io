@@ -1,4 +1,5 @@
 @media (max-width: 768px) {
+
   /* Hide desktop nav and contact button */
   .desktop-nav {
     display: none;
@@ -12,7 +13,7 @@
   .mobile-nav {
     display: block;
     position: relative;
-    z-index: 1001;
+    z-index: 3000;
   }
 
   /* Dropdown toggle button */
@@ -36,45 +37,47 @@
     transition: transform 0.3s ease;
   }
 
-  /* Mobile dropdown menu */
-  #dropdown-menu {
-    display: none;
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto 20px auto;
-    background-color: #111;
-    border-radius: 6px;
-    overflow: hidden;
-    z-index: 1000;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-  }
+#dropdown-menu {
+  position: fixed;
+  top: 70px; /* same height as header */
+  left: 0;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  z-index: 2500;
+  border-top: 1px solid #333;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
 
   #dropdown-menu.show {
     display: flex;
-    flex-direction: column;
-    max-height: 500px;
   }
 
   #dropdown-menu a {
-    padding: 12px 16px;
+    padding: 16px;
     text-decoration: none;
     color: #fff;
     font-size: 16px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    border-bottom: 1px solid #222;
+    transition: background-color 0.2s ease;
   }
 
-#dropdown-menu a:hover {
-  background-color: #7e9a76;
-  color: #fff;
-}
+  #dropdown-menu a:last-child {
+    border-bottom: none;
+  }
 
-#dropdown-menu a:active {
-  background-color: #333;
-  color: #fff;
-}
+  #dropdown-menu a:hover {
+    background-color: #7e9a76;
+    color: #fff;
+  }
 
-  /* Mobile gallery: 3x3 squares */
+  #dropdown-menu a:active {
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* Mobile gallery */
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -86,7 +89,7 @@
   .gallery-item {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* square container */
+    padding-top: 100%;
     overflow: hidden;
   }
 
@@ -104,22 +107,21 @@
   }
 }
 
-/* --- DESKTOP GALLERY --- 
-   Keep this OUTSIDE media query so it applies to desktop only
-*/
+/* --- DESKTOP GALLERY --- */
 @media (min-width: 769px) {
+
   .gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* center the row */
+    justify-content: center;
     align-items: flex-start;
     gap: 6px;
     margin: 40px auto;
   }
 
   .gallery-item {
-    height: 300px; /* fixed height for all */
-    flex: 0 0 auto; /* width depends on image naturally */
+    height: 300px;
+    flex: 0 0 auto;
     overflow: hidden;
   }
 
@@ -136,11 +138,8 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Remove active/focus background on mobile nav links */
-#dropdown-menu a:active,
+/* Remove active/focus background flash */
 #dropdown-menu a:focus,
-#dropdown-toggle:active,
 #dropdown-toggle:focus {
-  background: transparent !important;
   outline: none !important;
 }
