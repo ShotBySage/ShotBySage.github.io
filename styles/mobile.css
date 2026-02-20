@@ -64,10 +64,15 @@
     transition: background-color 0.2s ease, color 0.2s ease;
   }
 
-  #dropdown-menu a:hover,
-  #dropdown-menu a:active {
-    background-color: #00b140;
-    color: #fff;
+#dropdown-menu a:hover {
+  background-color: #7e9a76; /* fuckin GOOD green */
+  color: #fff;
+}
+
+#dropdown-menu a:active {
+  background-color: #333; /* subtle press effect */
+  color: #fff;
+}
   }
 
   /* Mobile gallery: 3x3 squares */
@@ -125,4 +130,18 @@
     object-fit: cover;
     display: block;
   }
+}
+
+/* Kill mobile tap highlight everywhere */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove active/focus background on mobile nav links */
+#dropdown-menu a:active,
+#dropdown-menu a:focus,
+#dropdown-toggle:active,
+#dropdown-toggle:focus {
+  background: transparent !important;
+  outline: none !important;
 }
