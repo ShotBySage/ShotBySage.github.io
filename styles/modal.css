@@ -1,6 +1,4 @@
-/* ========================= */
-/* ===== IMAGE MODAL ======= */
-/* ========================= */
+/* ===== IMAGE MODAL ===== */
 
 #image-modal {
   position: fixed;
@@ -26,74 +24,25 @@
   max-width: 100%;
   max-height: 85vh;
   object-fit: contain;
+  display: block;
 }
 
+/* CLOSE BUTTON */
 #close-modal {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--accent);
+  top: -12px;
+  right: -12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   border: none;
-  padding: 6px 10px;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
+  background: var(--accent);
   color: #111;
-  box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.6);
-}
-
-body.modal-open {
-  overflow: hidden;
-}
-
-/* ========================= */
-/* ===== NSFW OVERLAY ====== */
-/* ========================= */
-
-#nsfw-overlay {
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.95) 70%
-  );
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 5000;
-}
-
-#nsfw-overlay.active {
-  display: flex;
-}
-
-.nsfw-box {
-  background: #0c0c0c;
-  padding: 50px;
-  max-width: 460px;
-  width: 90%;
-  text-align: center;
-  border-radius: 12px;
-  border: 1px solid #222;
-  color: #f1f1f1;
-  box-shadow:
-    0 0 60px rgba(0,0,0,0.8),
-    0 0 25px rgba(var(--accent-rgb), 0.15);
-  animation: nsfwFade 0.4s ease forwards;
-}
-
-@keyframes nsfwFade {
-  from { opacity: 0; transform: scale(0.95); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-.nsfw-box h2 {
-  font-family: 'UnifrakturCook', serif;
-  font-size: 34px;
-  margin-bottom: 25px;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(var(--accent-rgb), 0.3);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.6);
 }
 
 .nsfw-box p {
