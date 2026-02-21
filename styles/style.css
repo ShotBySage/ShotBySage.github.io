@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   background-color: #111214;
   color: #f1f1f1;
 }
@@ -27,15 +27,17 @@ a:visited {
 
 .hero h1 {
   font-family: "UnifrakturCook", serif;
-  font-size: 5rem; /* desktop size stays */
-  color: #fff;
-  text-shadow: 0 0 6px rgba(144, 190, 144, 0.5);
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow:
+    0 0 12px rgba(110,139,107,0.9),
+    0 0 30px rgba(222,166,212,0.35);
   margin-bottom: 20px;
 }
 
 .hero h2,
 .hero p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", serif;
   color: #f1f1f1;
   font-size: 1rem; /* smaller middle text */
 }
@@ -67,8 +69,11 @@ a:visited {
   transform: translateY(-4px);
   box-shadow: 0 0 25px 8px #7e9a76;
 }
-.gallery-item:hover img {
-  filter: brightness(1);
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 12px rgba(110,139,107,0.8),
+    0 0 22px rgba(222,166,212,0.5);
 }
 .caption {
   position: absolute;
