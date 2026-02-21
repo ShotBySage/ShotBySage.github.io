@@ -67,10 +67,10 @@ const categories = {
   ],
   "Live Music": [
     { src: "images/live/1.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
-    { src: "images/live/9.jpg", caption: "John Newsham | Huddersfield Northern Quarter" },
+    { src: "images/live/10.jpg", caption: "John Newsham | Huddersfield Northern Quarter" },
     { src: "images/live/3.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
     { src: "images/live/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-    { src: "images/live/10.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
+    { src: "images/live/9.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
     { src: "images/live/5.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
     { src: "images/live/6.jpg", caption: "Close up at 'Salvation' Gig | Halifax Goth Fest 2026" },
     { src: "images/live/7.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },

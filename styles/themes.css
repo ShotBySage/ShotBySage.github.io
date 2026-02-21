@@ -1,0 +1,31 @@
+/* ===== THEME SYSTEM ===== */
+
+/* Default theme */
+.theme-pink {
+  --accent: #DEA6D4;
+  --accent-rgb: 222,166,212;
+}
+
+/* Lilac theme */
+.theme-lilac {
+  --accent: #C8A2FF;
+  --accent-rgb: 200,162,255;
+}
+
+/* Deep wine theme */
+.theme-wine {
+  --accent: #7A1C2E;
+  --accent-rgb: 122,28,46;
+}
+
+/* Midnight blue theme */
+.theme-blue {
+  --accent: #4A6FA5;
+  --accent-rgb: 74,111,165;
+}
+
+/* Moss theme */
+.theme-moss {
+  --accent: #6E8B6B;
+  --accent-rgb: 110,139,107;
+}

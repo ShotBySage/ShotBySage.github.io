@@ -5,7 +5,7 @@ header {
   width: 100%;
   height: 70px;
   background: rgba(17, 18, 20, 0.95);
-  border-bottom: 1px solid rgba(110,139,107,0.3);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
   z-index: 100;
 
   display: flex;
@@ -14,7 +14,7 @@ header {
   padding: 0 25px;
 }
 
-/* Site name (Homepage) */
+/* Site name */
 .site-name {
   flex: 1;
   text-align: left;
@@ -30,125 +30,8 @@ header {
 
 .site-name a:hover {
   text-shadow:
-    0 0 10px rgba(110,139,107,0.8),
-    0 0 20px rgba(222,166,212,0.4);
-}
-
-/* Desktop nav */
-.desktop-nav {
-  display: flex;
-  gap: 25px;
-}
-
-.desktop-nav a {
-  font-family: 'Cormorant Garamond', serif;
-  transition: text-shadow 0.3s ease;
-}
-
-.desktop-nav a:hover,
-.desktop-nav a.active {
-  text-shadow:
-    0 0 8px rgba(110,139,107,0.7),
-    0 0 16px rgba(222,166,212,0.3);
-}
-
-/* Contact button */
-.contact-btn {
-  font-family: 'UnifrakturCook', serif;
-  padding: 8px 18px;
-  border: 1px solid rgba(222,166,212,0.6);
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.contact-btn:hover {
-  box-shadow:
-    0 0 12px rgba(110,139,107,0.6),
-    0 0 20px rgba(222,166,212,0.4);
-}
-
-/* Mobile nav */
-.mobile-nav {
-  display: none;
-  position: relative;
-}
-
-#dropdown-toggle {
-  background: none;
-  border: 1px solid rgba(222,166,212,0.6);
-  border-radius: 4px;
-  padding: 6px 12px;
-  color: #f1f1f1;
-  font-family: 'UnifrakturCook', serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#dropdown-toggle:hover {
-  box-shadow:
-    0 0 12px rgba(110,139,107,0.6),
-    0 0 20px rgba(222,166,212,0.4);
-}
-
-#dropdown-menu {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background: #111214;
-  border: 1px solid rgba(222,166,212,0.6);
-  box-shadow:
-    0 0 12px rgba(110,139,107,0.4),
-    0 0 18px rgba(222,166,212,0.3);
-  display: none;
-  flex-direction: column;
-  width: 180px;
-  z-index: 101;
-}
-
-#dropdown-menu a {
-  padding: 10px;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-#dropdown-menu a:hover,
-#dropdown-menu a.active {
-  background: rgba(110,139,107,0.15);
-}
-
-/* --- HEADER --- */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 70px;
-  background: rgba(17, 18, 20, 0.95);
-  border-bottom: 1px solid rgba(110,139,107,0.3);
-  z-index: 100;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 25px;
-}
-
-/* Site name (Homepage) */
-.site-name {
-  flex: 1;
-  text-align: left;
-}
-
-.site-name a {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 1.9rem;
-  color: #f1f1f1;
-  text-decoration: none;
-  transition: text-shadow 0.3s ease;
-}
-
-.site-name a:hover {
-  text-shadow:
-    0 0 10px rgba(110,139,107,0.8),
-    0 0 20px rgba(222,166,212,0.4);
+    0 0 10px rgba(var(--accent-rgb), 0.8),
+    0 0 20px rgba(var(--accent-rgb), 0.4);
 }
 
 /* Desktop nav */
@@ -166,24 +49,23 @@ header {
 .desktop-nav a:hover,
 .desktop-nav a.active {
   text-shadow:
-    0 0 8px rgba(110,139,107,0.7),
-    0 0 16px rgba(222,166,212,0.3);
+    0 0 8px rgba(var(--accent-rgb), 0.7),
+    0 0 16px rgba(var(--accent-rgb), 0.3);
 }
 
 /* Contact button */
 .contact-btn {
-  font-family: 'UnifrakturCook
- ', serif;
+  font-family: 'UnifrakturCook', serif;
   padding: 8px 18px;
-  border: 1px solid rgba(222,166,212,0.6);
+  border: 1px solid var(--accent);
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
   box-shadow:
-    0 0 12px rgba(110,139,107,0.6),
-    0 0 20px rgba(222,166,212,0.4);
+    0 0 12px rgba(var(--accent-rgb), 0.6),
+    0 0 20px rgba(var(--accent-rgb), 0.4);
 }
 
 /* Mobile nav */
@@ -194,7 +76,7 @@ header {
 
 #dropdown-toggle {
   background: none;
-  border: 1px solid rgba(222,166,212,0.6);
+  border: 1px solid var(--accent);
   border-radius: 4px;
   padding: 6px 12px;
   color: #f1f1f1;
@@ -208,8 +90,8 @@ header {
 
 #dropdown-toggle:hover {
   box-shadow:
-    0 0 12px rgba(110,139,107,0.6),
-    0 0 20px rgba(222,166,212,0.4);
+    0 0 12px rgba(var(--accent-rgb), 0.6),
+    0 0 20px rgba(var(--accent-rgb), 0.4);
 }
 
 #arrow {
@@ -222,10 +104,10 @@ header {
   top: 60px;
   right: 0;
   background: #111214;
-  border: 1px solid rgba(222,166,212,0.6);
+  border: 1px solid var(--accent);
   box-shadow:
-    0 0 12px rgba(110,139,107,0.4),
-    0 0 18px rgba(222,166,212,0.3);
+    0 0 12px rgba(var(--accent-rgb), 0.4),
+    0 0 18px rgba(var(--accent-rgb), 0.3);
   display: none;
   flex-direction: column;
   width: 180px;
@@ -239,5 +121,5 @@ header {
 
 #dropdown-menu a:hover,
 #dropdown-menu a.active {
-  background: rgba(222,166,212,0.15)!important;
+  background: rgba(var(--accent-rgb), 0.15);
 }

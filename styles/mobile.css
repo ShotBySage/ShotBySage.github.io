@@ -67,10 +67,10 @@
     border-bottom: none;
   }
 
-  #dropdown-menu a:hover {
-    background-color: #7e9a76;
-    color: #fff;
-  }
+#dropdown-menu a:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
 
   #dropdown-menu a:active {
     background-color: #333;
