@@ -102,15 +102,15 @@ function renderGallery(images) {
     item.classList.add("gallery-item");
 
     const img = document.createElement("img");
-    img.src = getPreviewPath(image.src); // compressed preview
+    img.src = getPreviewPath(image.src);
     img.alt = image.caption;
     img.loading = "lazy";
 
     img.addEventListener("click", () => {
-	  if (window.closeMobileDropdown) window.closeMobileDropdown();
+      if (window.closeMobileDropdown) window.closeMobileDropdown();
       modal.style.display = "flex";
       resetZoom();
-      modalImg.src = image.src; // full resolution
+      modalImg.src = image.src;
       modalCaption.textContent = image.caption;
     });
 
@@ -193,12 +193,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!lastAccepted || now - lastAccepted > fifteenMinutes) {
     overlay.classList.add("active");
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
   }
 
   enterBtn?.addEventListener("click", () => {
-    localStorage.setItem("nsfwAcceptedTime", now);
+    localStorage.setItem("nsfwAcceptedTime", Date.now());
     overlay.classList.remove("active");
+    document.documentElement.style.overflow = "";
     document.body.style.overflow = "";
   });
 
