@@ -1,68 +1,88 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ShotBySage | Photographer</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShotBySage | Photographer</title>
 
-    <link
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles/style.css">
- <link rel="stylesheet" href="styles/themes.css">
-<link rel="stylesheet" href="styles/header.css">
-<link rel="stylesheet" href="styles/footer.css">
-<link rel="stylesheet" href="styles/modal.css">
-<link rel="stylesheet" href="styles/mobile.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-  </head>
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/themes.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/modal.css">
+  <link rel="stylesheet" href="styles/mobile.css">
 
-<body class="theme-blue">    <header>
-      <div class="site-name">
-        <a href="index.html">Homepage</a>
-      </div>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
 
-      <!-- Desktop Nav -->
-      <nav class="desktop-nav">
-        <a href="#">Audience & Candid</a>
-        <a href="#">Burlesque</a>
-        <a href="#">Live Music</a>
-        <a href="#">Performance Acts</a>
-      </nav>
+<body class="theme-blue">
 
-      <!-- Mobile Nav Button -->
-      <div class="mobile-nav">
-        <button id="dropdown-toggle" type="button">
-          Categories <span id="arrow">▼</span>
-        </button>
-      </div>
+<header>
+  <div class="site-name">
+    <a href="index.html">Homepage</a>
+  </div>
 
-      <!-- Contact button -->
-      <a class="contact-btn" href="mailto:SageCrossleyPhotography@gmail.com">
-        Contact
-      </a>
-    </header>
+  <nav class="desktop-nav">
+    <a href="#">Audience & Candid</a>
+    <a href="#">Burlesque</a>
+    <a href="#">Live Music</a>
+    <a href="#">Performance Acts</a>
+  </nav>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="dropdown-menu">
-      <a href="#">Audience & Candid</a>
-      <a href="#">Burlesque</a>
-      <a href="#">Live Music</a>
-      <a href="#">Performance Acts</a>
-    </div>
+  <div class="mobile-nav">
+    <button id="dropdown-toggle" type="button">
+      Categories <span id="arrow">▼</span>
+    </button>
+  </div>
 
-    <main class="hero">
-      <h1>ShotBySage</h1>
-      <p></p>
-      <div class="gallery" id="homepage-gallery"></div>
-    </main>
+  <a class="contact-btn" href="mailto:SageCrossleyPhotography@gmail.com">
+    Contact
+  </a>
+</header>
 
-  <footer>
+<div id="dropdown-menu">
+  <a href="#">Audience & Candid</a>
+  <a href="#">Burlesque</a>
+  <a href="#">Live Music</a>
+  <a href="#">Performance Acts</a>
+</div>
 
+<main class="hero">
+  <h1>ShotBySage</h1>
+  <p></p>
+  <div class="gallery" id="homepage-gallery"></div>
+</main>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <h2>Let’s Work Together</h2>
+
+  <form
+    class="contact-form"
+    action="https://formspree.io/f/xqedyyoj"
+    method="POST"
+    data-formspree="true"
+  >
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Message" rows="6" required></textarea>
+
+    <input type="hidden" name="_subject" value="New message from ShotBySage website">
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p class="form-message" id="form-message"></p>
+</section>
+
+<footer>
   <div class="footer-text">
     <a href="https://www.instagram.com/shotbysage" target="_blank" rel="noopener">
       Instagram
@@ -77,42 +97,55 @@
     </a>
   </div>
 
-  <div class="footer-icons">
-    <a href="https://www.instagram.com/shotbysage_" target="_blank" rel="noopener">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="https://www.tiktok.com/@shotbysage_" target="_blank" rel="noopener">
-      <i class="fab fa-tiktok"></i>
-    </a>
-
-    <a href="mailto:sagecrossleyphotography@gmail.com">
-      <i class="fas fa-envelope"></i>
-    </a>
-	
-  </div>
-	<p class="footer-copy">
-  <h5>©ShotBySage_<h5>
-</p>
+  <p class="footer-copy">
+    ©ShotBySage_
+  </p>
 </footer>
 
-    <script src="gallery.js"></script>
+<script src="gallery.js"></script>
+<script src="mobiledropdown.js"></script>
 
-    <script src="mobiledropdown.js"></script>
-	
-	<!-- NSFW Gate -->
+<!-- NSFW Gate -->
 <div id="nsfw-overlay">
   <div class="nsfw-box">
     <h2>Content Warning!</h2>
     <p>
       This site contains burlesque and artistic performance photography.
-      Some images may include partial or full nudity. 
+      Some images may include partial or full nudity.
     </p>
     <button id="nsfw-enter">Enter Site</button>
     <button id="nsfw-exit">Leave</button>
   </div>
-
 </div>
 
-  </body>
+<!-- Form Submission Script -->
+<script>
+  const form = document.querySelector(".contact-form");
+  const messageBox = document.getElementById("form-message");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+
+    messageBox.classList.remove("success", "error");
+
+    if (response.ok) {
+      form.reset();
+      messageBox.textContent = "Message sent successfully. I aim to reply within 24 hours.";
+      messageBox.classList.add("success");
+    } else {
+      messageBox.textContent = "Something went wrong. Please try again.";
+      messageBox.classList.add("error");
+    }
+  });
+</script>
+
+</body>
 </html>

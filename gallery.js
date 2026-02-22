@@ -9,6 +9,7 @@ const homepageImages = [
   { src: "images/homepage/5.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
   { src: "images/homepage/6.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
   { src: "images/homepage/7.jpg", caption: "John Newsham | Huddersfield Northern Quarter" },
+  { src: "images/homepage/8.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
 ];
 
 const defaultHeroText =
@@ -33,10 +34,10 @@ const modalImg = document.getElementById("modal-img");
 const modalCaption = document.getElementById("modal-caption");
 const closeBtn = document.getElementById("close-modal");
 
-closeBtn.addEventListener("click", () => (modal.style.display = "none"));
-if (window.closeMobileDropdown) window.closeMobileDropdown();
+closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+
 modal.addEventListener("click", (e) => {
-  if (e.target === modal) modal.style.display = "none";
+  if (e.target === modal) modal.classList.remove("active");
 });
 
 // ---------------- ZOOM RESET ----------------
@@ -53,6 +54,7 @@ const categories = {
     { src: "images/Audience/2.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
     { src: "images/Audience/3.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
     { src: "images/Audience/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
+    { src: "images/Audience/5.jpg", caption: "Audience candid at Salvation Gig | Halifax Goth Fest 2026" },
   ],
   "Burlesque": [
     { src: "images/Burlesque/1.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
@@ -75,6 +77,9 @@ const categories = {
     { src: "images/live/6.jpg", caption: "Close up at 'Salvation' Gig | Halifax Goth Fest 2026" },
     { src: "images/live/7.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
     { src: "images/live/8.jpg", caption: "SillyLittleSongz | Huddersfield Northern Quarter" },
+    { src: "images/live/11.jpg", caption: "Cerys | Huddersfield Northern Quarter" },
+    { src: "images/live/12.jpg", caption: "SamWise | Huddersfield Northern Quarter" },
+    { src: "images/live/8.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
   ],
   "Performance Acts": [
     { src: "images/performance/1.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
@@ -102,15 +107,15 @@ function renderGallery(images) {
     item.classList.add("gallery-item");
 
     const img = document.createElement("img");
-    img.src = getPreviewPath(image.src); // compressed preview
+    img.src = getPreviewPath(image.src);
     img.alt = image.caption;
     img.loading = "lazy";
 
     img.addEventListener("click", () => {
-	  if (window.closeMobileDropdown) window.closeMobileDropdown();
-      modal.style.display = "flex";
+      if (window.closeMobileDropdown) window.closeMobileDropdown();
+      modal.classList.add("active");
       resetZoom();
-      modalImg.src = image.src; // full resolution
+      modalImg.src = image.src;
       modalCaption.textContent = image.caption;
     });
 
@@ -126,6 +131,7 @@ function renderGallery(images) {
 
 // ---------------- DESKTOP NAV ----------------
 const navLinks = document.querySelectorAll(".desktop-nav a");
+
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -174,35 +180,3 @@ renderGallery(homepageImages);
     });
   });
 })();
-
-// ===== NSFW HOMEPAGE GATE (15 minute reset) =====
-document.addEventListener("DOMContentLoaded", () => {
-  const overlay = document.getElementById("nsfw-overlay");
-  const enterBtn = document.getElementById("nsfw-enter");
-  const exitBtn = document.getElementById("nsfw-exit");
-
-  const isHomepage =
-    window.location.pathname === "/" ||
-    window.location.pathname.includes("index.html");
-
-  if (!isHomepage) return;
-
-  const lastAccepted = localStorage.getItem("nsfwAcceptedTime");
-  const now = Date.now();
-  const fifteenMinutes = 15 * 60 * 1000;
-
-  if (!lastAccepted || now - lastAccepted > fifteenMinutes) {
-    overlay.classList.add("active");
-    document.body.style.overflow = "hidden";
-  }
-
-  enterBtn?.addEventListener("click", () => {
-    localStorage.setItem("nsfwAcceptedTime", now);
-    overlay.classList.remove("active");
-    document.body.style.overflow = "";
-  });
-
-  exitBtn?.addEventListener("click", () => {
-    window.location.href = "https://www.google.com";
-  });
-});
