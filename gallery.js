@@ -180,3 +180,37 @@ renderGallery(homepageImages);
     });
   });
 })();
+
+// ===== NSFW HOMEPAGE GATE (15 minute reset) =====
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("nsfw-overlay");
+  const enterBtn = document.getElementById("nsfw-enter");
+  const exitBtn = document.getElementById("nsfw-exit");
+
+  const isHomepage =
+    window.location.pathname === "/" ||
+    window.location.pathname.includes("index.html");
+
+  if (!isHomepage) return;
+
+  const lastAccepted = localStorage.getItem("nsfwAcceptedTime");
+  const now = Date.now();
+  const fifteenMinutes = 15 * 60 * 1000;
+
+  if (!lastAccepted || now - lastAccepted > fifteenMinutes) {
+    overlay.classList.add("active");
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  }
+
+  enterBtn?.addEventListener("click", () => {
+    localStorage.setItem("nsfwAcceptedTime", Date.now());
+    overlay.classList.remove("active");
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+  });
+
+  exitBtn?.addEventListener("click", () => {
+    window.location.href = "https://www.google.com";
+  });
+});
