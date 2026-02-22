@@ -79,7 +79,7 @@ const categories = {
     { src: "images/live/8.jpg", caption: "SillyLittleSongz | Huddersfield Northern Quarter" },
     { src: "images/live/11.jpg", caption: "Cerys | Huddersfield Northern Quarter" },
     { src: "images/live/12.jpg", caption: "SamWise | Huddersfield Northern Quarter" },
-    { src: "images/live/8.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
+    { src: "images/live/10.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
   ],
   "Performance Acts": [
     { src: "images/performance/1.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
@@ -213,4 +213,5 @@ document.addEventListener("DOMContentLoaded", () => {
   exitBtn?.addEventListener("click", () => {
     window.location.href = "https://www.google.com";
   });
+
 });
