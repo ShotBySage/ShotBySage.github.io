@@ -2,14 +2,16 @@ console.log("JS loaded");
 
 // ---------------- HOMEPAGE FAVORITES ----------------
 const homepageImages = [
-  { src: "images/homepage/1.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
-  { src: "images/homepage/2.jpg", caption: "Stripknot | Halifax Goth Fest 2026" },
-  { src: "images/homepage/3.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
-  { src: "images/homepage/4.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
-  { src: "images/homepage/5.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
-  { src: "images/homepage/6.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
   { src: "images/homepage/7.jpg", caption: "John Newsham | Huddersfield Northern Quarter" },
+  { src: "images/homepage/9.jpg", caption: "Audience candid at Salvation Gig | Halifax Goth Fest 2026" },
   { src: "images/homepage/8.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
+  { src: "images/homepage/1.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
+  { src: "images/homepage/5.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
+  { src: "images/homepage/2.jpg", caption: "Stripknot | Halifax Goth Fest 2026" },
+  { src: "images/homepage/4.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
+  { src: "images/homepage/3.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
+  { src: "images/homepage/6.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
+
 ];
 
 const defaultHeroText =
@@ -68,24 +70,25 @@ const categories = {
     { src: "images/Burlesque/9.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
   ],
   "Live Music": [
-    { src: "images/live/1.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
+    { src: "images/live/11.jpg", caption: "Cerys | Huddersfield Northern Quarter" },
+    { src: "images/live/8.jpg", caption: "SillyLittleSongz | Huddersfield Northern Quarter" },	
+	{ src: "images/live/12.jpg", caption: "SamWise | Huddersfield Northern Quarter" },
     { src: "images/live/10.jpg", caption: "John Newsham | Huddersfield Northern Quarter" },
     { src: "images/live/3.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
-    { src: "images/live/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-    { src: "images/live/9.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
-    { src: "images/live/5.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-    { src: "images/live/6.jpg", caption: "Close up at 'Salvation' Gig | Halifax Goth Fest 2026" },
-    { src: "images/live/7.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
-    { src: "images/live/8.jpg", caption: "SillyLittleSongz | Huddersfield Northern Quarter" },
-    { src: "images/live/11.jpg", caption: "Cerys | Huddersfield Northern Quarter" },
-    { src: "images/live/12.jpg", caption: "SamWise | Huddersfield Northern Quarter" },
     { src: "images/live/13.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
-  ],
+    { src: "images/live/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
+	{ src: "images/live/7.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
+    { src: "images/live/5.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
+    { src: "images/live/1.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
+    { src: "images/live/9.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
+    { src: "images/live/6.jpg", caption: "Close up at 'Salvation' Gig | Halifax Goth Fest 2026" },
+ ],
   "Performance Acts": [
     { src: "images/performance/1.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
     { src: "images/performance/2.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
-    { src: "images/performance/3.jpg", caption: "SandInYourEye | HuddersfieldBID Charity Event" },
+    { src: "images/performance/3.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
     { src: "images/performance/4.jpg", caption: "SandInYourEye | HuddersfieldBID Charity Event" },
+    { src: "images/performance/5.jpg", caption: "SandInYourEye | HuddersfieldBID Charity Event" },
   ],
 };
 
