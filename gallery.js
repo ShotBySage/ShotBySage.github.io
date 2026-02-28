@@ -4,6 +4,7 @@ console.log("JS loaded");
 const homepageImages = [
   { src: "images/homepage/7.jpg", caption: "John Newsham | Huddersfield Northern Quarter" },
   { src: "images/homepage/9.jpg", caption: "Audience candid at Salvation Gig | Halifax Goth Fest 2026" },
+  { src: "images/homepage/10.jpg", caption:  "Eliza Beth | Huddersfield Northern Quarter" },
   { src: "images/homepage/8.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
   { src: "images/homepage/1.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
   { src: "images/homepage/5.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
@@ -71,11 +72,13 @@ const categories = {
   ],
   "Live Music": [
     { src: "images/live/11.jpg", caption: "Cerys | Huddersfield Northern Quarter" },
+	{ src: "images/live/14.jpg", caption: "Eliza Beth | Huddersfield Northern Quarter" },
     { src: "images/live/8.jpg", caption: "SillyLittleSongz | Huddersfield Northern Quarter" },	
 	{ src: "images/live/12.jpg", caption: "SamWise | Huddersfield Northern Quarter" },
     { src: "images/live/10.jpg", caption: "John Newsham | Huddersfield Northern Quarter" },
     { src: "images/live/3.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
     { src: "images/live/13.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
+    { src: "images/live/15.jpg", caption: "Eliza Beth | Huddersfield Northern Quarter" },
     { src: "images/live/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
 	{ src: "images/live/7.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
     { src: "images/live/5.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
