@@ -1,0 +1,108 @@
+.site-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: rgba(5,5,5,.96);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: padding .22s ease, background .22s ease, border-color .22s ease;
+}
+
+.site-header.is-condensed{
+  background: rgba(5,5,5,.98);
+}
+
+.header-inner{
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: padding .22s ease;
+}
+
+.site-header.is-condensed .header-inner{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.site-brand{
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(26px, 2.3vw, 40px);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.site-header.is-condensed .site-brand{
+  font-size: clamp(22px, 2vw, 30px);
+}
+
+.contact-menu{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 170px;
+}
+
+.contact-toggle{
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0;
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.contact-label{
+  display: inline-block;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.contact-actions{
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.contact-menu.open .contact-label{
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.contact-menu.open .contact-actions{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.contact-icon{
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--text);
+  border-radius: 999px;
+  transition: color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.contact-icon:hover{
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.16);
+}
+
+.contact-icon svg{
+  width: 20px;
+  height: 20px;
+}

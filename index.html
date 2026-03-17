@@ -1,165 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShotBySage | Photographer</title>
+  <title>Shot by Sage</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/themes.css">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/modal.css">
-  <link rel="stylesheet" href="styles/mobile.css">
-
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/mobile.css">
 </head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#top" class="site-brand">Shot by Sage</a>
 
-<body class="theme-lilac">
+      <div class="contact-menu" id="contact-menu">
+        <button
+          class="contact-toggle"
+          id="contact-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="contact-actions"
+        >
+          <span class="contact-label">Contact</span>
+        </button>
 
-<header>
-  <div class="site-name">
-    <a href="index.html">Homepage</a>
+        <div class="contact-actions" id="contact-actions" aria-hidden="true">
+          <a class="contact-icon" href="mailto:sagecrossleyphotography@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M4 8l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </a>
+
+          <a class="contact-icon" href="https://instagram.com/shotbysage_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="17.2" cy="6.8" r="1" fill="currentColor"/>
+            </svg>
+          </a>
+
+          <a class="contact-icon" href="#contact-form" aria-label="Jump to contact form">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 5v14" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M7 14l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="hero-kicker">Live music & performance photography</p>
+      <h1>Dark rooms. Real atmosphere. Honest coverage.</h1>
+      <p class="hero-copy">
+        Selected work from grassroots venues, performance events, backstage moments,
+        and the spaces in between.
+      </p>
+	  <div id="scroll-cue">scroll ↓</div>
+    </section>
+
+    <section id="portfolio" class="portfolio"></section>
+
+    <section id="contact-form" class="contact-section">
+      <div class="contact-wrap">
+        <div class="section-rule"></div>
+        <h2>Get in touch</h2>
+        <p class="contact-intro">Bookings, press coverage, commissions, or general enquiries.</p>
+
+        <form action="https://formspree.io/f/xqedyyoj" method="POST" class="contact-form" id="contact-form-real"> 
+          <label>
+            <span>Your email</span>
+            <input type="email" name="email" required>
+          </label>
+
+          <label>
+            <span>Your message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <button type="submit" class="submit-btn">Send</button>
+		  <p id="form-status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© Shot by Sage</p>
+    </div>
+  </footer>
+
+  <div id="image-modal" class="image-modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Close image">×</button>
+      <button class="modal-nav modal-prev" id="modal-prev" type="button" aria-label="Previous image">‹</button>
+      <img class="modal-img" id="modal-img" alt="">
+      <button class="modal-nav modal-next" id="modal-next" type="button" aria-label="Next image">›</button>
+      <p class="modal-caption" id="modal-caption"></p>
+    </div>
   </div>
 
-  <nav class="desktop-nav">
-    <a href="#">Audience & Candid</a>
-    <a href="#">Burlesque</a>
-    <a href="#">Live Music</a>
-    <a href="#">Performance Acts</a>
-  </nav>
-
-  <div class="mobile-nav">
-    <button id="dropdown-toggle" type="button">
-      Categories <span id="arrow">▼</span>
-    </button>
-  </div>
-
-  <a class="contact-btn" href="mailto:SageCrossleyPhotography@gmail.com">
-    Contact
-  </a>
-</header>
-
-<div id="dropdown-menu">
-  <a href="#">Audience & Candid</a>
-  <a href="#">Burlesque</a>
-  <a href="#">Live Music</a>
-  <a href="#">Performance Acts</a>
-</div>
-
-<main class="hero">
-  <h1>ShotBySage</h1>
-  <p></p>
-  <div class="gallery" id="homepage-gallery"></div>
-</main>
-
-<!-- CONTACT SECTION -->
-<section class="contact-section">
-  <h2>Let’s Work Together</h2>
-
-  <form
-    class="contact-form"
-    action="https://formspree.io/f/xqedyyoj"
-    method="POST"
-    data-formspree="true"
-  >
-    <input type="text" name="name" placeholder="Name" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <textarea name="message" placeholder="Message" rows="6" required></textarea>
-
-    <input type="hidden" name="_subject" value="New message from ShotBySage website">
-
-    <button type="submit">Send Message</button>
-  </form>
-
-  <p class="form-message" id="form-message"></p>
-</section>
-
-<footer>
-  <div class="footer-text">
-    <a href="https://www.instagram.com/shotbysage_" target="_blank">
-      Instagram
-    </a>
-
-    <a href="https://tiktok.com/@ShotBySage_" target="_blank">
-      TikTok
-    </a>
-
-    <a href="mailto:SageCrossleyPhotography@gmail.com">
-      SageCrossleyPhotography@gmail.com
-    </a>
-  </div>
-
-  <div class="footer-icons">
-    <a href="https://www.instagram.com/shotbysage_?igsh=eDdnOHc1ZXI1MjZk" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="https://www.tiktok.com/@shotbysage_?_r=1&_t=ZN-947sLWQfPGw" target="_blank">
-      <i class="fab fa-tiktok"></i>
-    </a>
-
-    <a href="mailto:SageCrossleyPhotography@gmail.com">
-      <i class="fas fa-envelope"></i>
-    </a>
-  </div>
-
-  <p class="footer-copy">©ShotBySage_</p>
-</footer>
-
-<script src="gallery.js"></script>
-<script src="mobiledropdown.js"></script>
-
-<!-- NSFW Gate -->
-<div id="nsfw-overlay">
-  <div class="nsfw-box">
-    <h2>Content Warning!</h2>
-    <p>
-      This site contains burlesque and artistic performance photography.
-      Some images may include partial or full nudity.
-    </p>
-    <button id="nsfw-enter">Enter Site</button>
-    <button id="nsfw-exit">Leave</button>
-  </div>
-</div>
-
-<!-- Form Submission Script -->
-<script>
-  const form = document.querySelector(".contact-form");
-  const messageBox = document.getElementById("form-message");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const data = new FormData(form);
-
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { Accept: "application/json" },
-    });
-
-    messageBox.classList.remove("success", "error");
-
-    if (response.ok) {
-      form.reset();
-      messageBox.textContent = "Message sent successfully. I aim to reply within 24 hours.";
-      messageBox.classList.add("success");
-    } else {
-      messageBox.textContent = "Something went wrong. Please try again.";
-      messageBox.classList.add("error");
-    }
-  });
-</script>
-
+  <script src="gallery.js"></script>
 </body>
-
 </html>
-
