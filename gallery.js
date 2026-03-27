@@ -6,6 +6,31 @@ console.log("gallery editorial system loaded");
 
 const projects = [
   {
+    title: "Noise Control band",
+    id: "noicont",
+    previewCount: 4,
+    images: [
+      { src: "images/noicont/001.jpg", caption: "Dylan | NoiseControl" },
+      { src: "images/noicont/026.jpg", caption: "Elle | NoiseControl" },
+      { src: "images/noicont/028.jpg", caption: "NoiseControl" },
+      { src: "images/noicont/024.jpg", caption: "Kit | NoiseControl" },
+      { src: "images/noicont/005.jpg", caption: "Dylan | NoiseControl" },
+      { src: "images/noicont/003.jpg", caption: "Dylan | NoiseControl" },
+	  { src: "images/noicont/019.jpg", caption: "Kit | NoiseControl" },	  
+      { src: "images/noicont/016.jpg", caption: "Curt | NoiseControl" },	  
+      { src: "images/noicont/010.jpg", caption: "Morgan | NoiseControl" },
+      { src: "images/noicont/011.jpg", caption: "Morgan | NoiseControl" },
+      { src: "images/noicont/014.jpg", caption: "Elle & Dylan | NoiseControl" },
+      { src: "images/noicont/015.jpg", caption: "Curt | NoiseControl" },	  
+      { src: "images/noicont/018.jpg", caption: "Curt & Kit | NoiseControl" },	 
+      { src: "images/noicont/027.jpg", caption: "Elle | NoiseControl" },	
+      { src: "images/noicont/029.jpg", caption: "NoiseControl" },	  
+	  
+
+	  
+    ]
+  },
+  {
     title: "Cezzasean 'Divine Pressure' BTS",
     id: "project-Cezzasean",
     previewCount: 4,
@@ -29,9 +54,11 @@ const projects = [
     previewCount: 4,
     images: [
       { src: "images/nq/1.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
+      { src: "images/nq/9.jpg", caption: "LFAD band | Huddersfield Northern Quarter" },
       { src: "images/nq/2.jpg", caption: "Eliza Beth | Huddersfield Northern Quarter" },
       { src: "images/nq/3.jpg", caption: "Joey 'Bob' Gee | Huddersfield Northern Quarter" },
       { src: "images/nq/4.jpg", caption: "Cerys | Huddersfield Northern Quarter" },
+	  { src: "images/nq/10.jpg", caption: "LFAD band | Huddersfield Northern Quarter" },
       { src: "images/nq/5.jpg", caption: "SillyLittleSongz | Huddersfield Northern Quarter" },
       { src: "images/nq/6.jpg", caption: "John Newsham | Huddersfield Northern Quarter" },
       { src: "images/nq/7.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
