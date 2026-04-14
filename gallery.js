@@ -54,7 +54,7 @@ const projects = [
     previewCount: 4,
     images: [
 	  { src: "images/nq/11.jpg", caption: "Lindon | Huddersfield Northern Quarter" },
-      { src: "images/nq/3.jpg", caption: "RichT | Huddersfield Northern Quarter" },
+      { src: "images/nq/13.jpg", caption: "RichT | Huddersfield Northern Quarter" },
       { src: "images/nq/12.jpg", caption: "Eleanor | Huddersfield Northern Quarter" },
       { src: "images/nq/1.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
       { src: "images/nq/9.jpg", caption: "LFAD band | Huddersfield Northern Quarter" },
