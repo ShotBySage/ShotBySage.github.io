@@ -298,10 +298,14 @@ async function renderPortfolio() {
         </div>
       `)
       .join("");
-
-    const mobileExpandedMarkup = project.images
-      .map((img, index) => createImageButton(project.id, index, img, getPreviewPath(img.src)))
-      .join("");
+	  
+const mobileExpandedMarkup = project.images
+  .map((img, index) => ({ img, index }))
+  .filter(({ index }) => !previewSet.has(index))
+  .map(({ img, index }) =>
+    createImageButton(project.id, index, img, getPreviewPath(img.src))
+  )
+  .join("");
 
     section.innerHTML = `
       <div class="section-rule section-rule-top"></div>
