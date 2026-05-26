@@ -5,31 +5,63 @@ console.log("gallery editorial system loaded");
 ========================= */
 
 const projects = [
-  {
-    title: "Noise Control band",
-    id: "noicont",
+   {
+    title: "Northern Quarter Open Mic",
+    id: "project-nq",
     previewCount: 4,
     images: [
-      { src: "images/noicont/001.jpg", caption: "Dylan | NoiseControl" },
-      { src: "images/noicont/026.jpg", caption: "Elle | NoiseControl" },
-      { src: "images/noicont/028.jpg", caption: "NoiseControl" },
-      { src: "images/noicont/024.jpg", caption: "Kit | NoiseControl" },
-      { src: "images/noicont/005.jpg", caption: "Dylan | NoiseControl" },
-      { src: "images/noicont/003.jpg", caption: "Dylan | NoiseControl" },
-	  { src: "images/noicont/019.jpg", caption: "Kit | NoiseControl" },	  
-      { src: "images/noicont/016.jpg", caption: "Curt | NoiseControl" },	  
-      { src: "images/noicont/010.jpg", caption: "Morgan | NoiseControl" },
-      { src: "images/noicont/011.jpg", caption: "Morgan | NoiseControl" },
-      { src: "images/noicont/014.jpg", caption: "Elle & Dylan | NoiseControl" },
-      { src: "images/noicont/015.jpg", caption: "Curt | NoiseControl" },	  
-      { src: "images/noicont/018.jpg", caption: "Curt & Kit | NoiseControl" },	 
-      { src: "images/noicont/027.jpg", caption: "Elle | NoiseControl" },	
-      { src: "images/noicont/029.jpg", caption: "NoiseControl" },	  
-	  
+	  { src: "images/wsom/1.jpg", caption: "Ever & Always | Huddersfield Northern Quarter" },
+	  { src: "images/wsom/3.jpg", caption: "Cerys | Huddersfield Northern Quarter" },
+	  { src: "images/wsom/2.jpg", caption: "Joe Robinson | Huddersfield Northern Quarter" },
+	  { src: "images/wsom/6.jpg", caption: "Stanislava Chalova | Huddersfield Northern Quarter" },
+	  { src: "images/wsom/8.jpg", caption: "Adam Gillibrand | Huddersfield Northern Quarter" },
+	  { src: "images/wsom/4.jpg", caption: "Ever & Always | Huddersfield Northern Quarter" },
+	  { src: "images/wsom/9.jpg", caption: "Ever & Always | Huddersfield Northern Quarter" },
+	  { src: "images/wsom/5.jpg", caption: "Stanislava Chalova & Matt Morley | Huddersfield Northern Quarter" },
+	  { src: "images/wsom/7.jpg", caption: "Mike Harper | Huddersfield Northern Quarter" },
+	  { src: "images/wsom/10.jpg", caption: "Ever & Always | Huddersfield Northern Quarter" },
 
+    ]
+  },
+   
+  {
+    title: "Creative portrait",
+    id: "CREATEPORT",
+    previewCount: 4,
+    images: [
+      { src: "images/creative/002alt.jpg", caption: "unnamed" },
+      { src: "images/creative/005.jpg", caption: "unnamed" },
+      { src: "images/creative/001alt.jpg", caption: "unnamed" },
+  
+    ]
+  },
+ 
+
+  {
+    title: "3-2-1 AMPED",
+    id: "AMPED",
+    previewCount: 4,
+    images: [
+      { src: "images/3-2-1AMPED/TLS2.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/NCMORGAN.jpg", caption: "NOISE CONTROL | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/NCKIT.jpg", caption: "NOISE CONTROL | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TLS3.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/NCDUO.jpg", caption: "NOISE CONTROL | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TKGROUP.jpg", caption: "TAMARAK | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/NC.jpg", caption: "NOISE CONTROL | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TKB.jpg", caption: "TAMARAK | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TKT.jpg", caption: "TAMARAK | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TLA4.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TLS6.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/NCELLE.jpg", caption: "NOISE CONTROL | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TKT2.jpg", caption: "TAMARAK | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TLS.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TLS5.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
+      { src: "images/3-2-1AMPED/TLS6.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
 	  
     ]
   },
+ 
   {
     title: "Cezzasean 'Divine Pressure' BTS",
     id: "project-Cezzasean",
@@ -48,61 +80,15 @@ const projects = [
       { src: "images/CEZZASEAN/12.jpg", caption: "Cezzasean | BTS for 'Divine Pressure' Music video" },
     ]
   },
+  
   {
-    title: "Northern Quarter Open Mic",
-    id: "project-nq",
+    title: "Buskers",
+    id: "busk",
     previewCount: 4,
     images: [
-	  { src: "images/nq/11.jpg", caption: "Lindon | Huddersfield Northern Quarter" },
-      { src: "images/nq/13.jpg", caption: "RichT | Huddersfield Northern Quarter" },
-      { src: "images/nq/12.jpg", caption: "Eleanor | Huddersfield Northern Quarter" },
-      { src: "images/nq/1.jpg", caption: "Florence Wright | Huddersfield Northern Quarter" },
-      { src: "images/nq/9.jpg", caption: "LFAD band | Huddersfield Northern Quarter" },
-      { src: "images/nq/2.jpg", caption: "Eliza Beth | Huddersfield Northern Quarter" },
-      { src: "images/nq/3.jpg", caption: "Joey 'Bob' Gee | Huddersfield Northern Quarter" },
-      { src: "images/nq/4.jpg", caption: "Cerys | Huddersfield Northern Quarter" },
-	  { src: "images/nq/10.jpg", caption: "LFAD bandcd  | Huddersfield Northern Quarter" },
-      { src: "images/nq/5.jpg", caption: "SillyLittleSongz | Huddersfield Northern Quarter" },
-      { src: "images/nq/6.jpg", caption: "John Newsham | Huddersfield Northern Quarter" },
-      { src: "images/nq/7.jpg", caption: "John Bussey | Huddersfield Northern Quarter" },
-      { src: "images/nq/8.jpg", caption: "Didn't catch their name | Huddersfield Northern Quarter" },
-    ]
-  },
-  {
-    title: "Halifax Goth Fest",
-    id: "project-halifax",
-    previewCount: 4,
-    images: [
-      { src: "images/Burlesque/1.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
-      { src: "images/Burlesque/2.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
-      { src: "images/Burlesque/3.jpg", caption: "Stripknot | Halifax Goth Fest 2026" },
-      { src: "images/Burlesque/4.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
-      { src: "images/Burlesque/5.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
-      { src: "images/Burlesque/6.jpg", caption: "Stripknot | Halifax Goth Fest 2026" },
-      { src: "images/Burlesque/7.jpg", caption: "DisgusTay | Halifax Goth Fest 2026" },
-      { src: "images/Burlesque/8.jpg", caption: "Stripknot | Halifax Goth Fest 2026" },
-      { src: "images/Burlesque/9.jpg", caption: "Lois Tunnicliff | Halifax Goth Fest 2026" },
-      { src: "images/Audience/1.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
-      { src: "images/Audience/2.jpg", caption: "Jamie-Leigh Pollard | Halifax Goth Fest 2026" },
-      { src: "images/Audience/3.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-      { src: "images/Audience/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-      { src: "images/Audience/5.jpg", caption: "Audience candid at Salvation Gig | Halifax Goth Fest 2026" },
-      { src: "images/live/4.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-      { src: "images/live/7.jpg", caption: "Full 'Salvation' Gig group | Halifax Goth Fest 2026" },
-      { src: "images/live/5.jpg", caption: "Audience Shot at Salvation Gig | Halifax Goth Fest 2026" },
-      { src: "images/live/6.jpg", caption: "Close up at 'Salvation' Gig | Halifax Goth Fest 2026" }
-    ]
-  },
-  {
-    title: "Performance Acts",
-    id: "project-performance",
-    previewCount: 4,
-    images: [
-      { src: "images/performance/1.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
-      { src: "images/performance/2.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
-      { src: "images/performance/3.jpg", caption: "AwolCircusArts | HuddersfieldBID Charity Event" },
-      { src: "images/performance/4.jpg", caption: "SandInYourEye | HuddersfieldBID Charity Event" },
-      { src: "images/performance/5.jpg", caption: "SandInYourEye | HuddersfieldBID Charity Event" }
+      { src: "images/Buskers/image-120.jpg", caption: "Nick | Durham" },
+      { src: "images/Buskers/image-200.jpg", caption: "Nick's dog | Durham" },
+      { src: "images/Buskers/image-68.jpg", caption: "Nick | Durham" },
     ]
   }
 ];
