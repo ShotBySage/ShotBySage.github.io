@@ -19,7 +19,6 @@ const projects = [
 	  { src: "images/wsom/9.jpg", caption: "Ever & Always | Huddersfield Northern Quarter" },
 	  { src: "images/wsom/5.jpg", caption: "Stanislava Chalova & Matt Morley | Huddersfield Northern Quarter" },
 	  { src: "images/wsom/7.jpg", caption: "Mike Harper | Huddersfield Northern Quarter" },
-	  { src: "images/wsom/10.jpg", caption: "Ever & Always | Huddersfield Northern Quarter" },
 
     ]
   },
@@ -57,7 +56,7 @@ const projects = [
       { src: "images/3-2-1AMPED/TKT2.jpg", caption: "TAMARAK | 3-2-1 Wednesday at AMPED" },
       { src: "images/3-2-1AMPED/TLS.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
       { src: "images/3-2-1AMPED/TLS5.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
-      { src: "images/3-2-1AMPED/TLS6.jpg", caption: "THE LIGHT SHOW | 3-2-1 Wednesday at AMPED" },
+
 	  
     ]
   },
