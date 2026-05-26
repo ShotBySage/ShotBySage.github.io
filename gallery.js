@@ -285,9 +285,7 @@ async function renderPortfolio() {
       .join("");
 	  
 const mobileExpandedMarkup = project.images
-  .map((img, index) => ({ img, index }))
-  .filter(({ index }) => !previewSet.has(index))
-  .map(({ img, index }) =>
+  .map((img, index) =>
     createImageButton(project.id, index, img, getPreviewPath(img.src))
   )
   .join("");
