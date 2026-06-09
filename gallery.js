@@ -10,7 +10,6 @@ const projects = [
     id: "project-nq",
     previewCount: 4,
     images: [
-	  { src: "images/wsom/1.jpg", caption: "Ever & Always | Huddersfield Northern Quarter" },
 	  { src: "images/wsom/3.jpg", caption: "Cerys | Huddersfield Northern Quarter" },
 	  { src: "images/wsom/2.jpg", caption: "Joe Robinson | Huddersfield Northern Quarter" },
 	  { src: "images/wsom/6.jpg", caption: "Stanislava Chalova | Huddersfield Northern Quarter" },
